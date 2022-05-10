@@ -11,6 +11,6 @@ describe 'fizzbuzz' do
     expect(fizzbuzz(15)).to eq 'fizzbuzz'
   end
   it 'return "number" when number less than 1' do
-    expect(fizzbuzz(num)). to eq 'num'
+    expect(fizzbuzz(0)).to eq 'num'
   end
 end
