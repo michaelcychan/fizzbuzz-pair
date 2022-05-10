@@ -1,22 +1,18 @@
 require 'fizzbuzz'
-
 describe 'fizzbuzz' do
-  it 'returns "fizz" when passed 3' do
-    expect(fizzbuzz(3)).to eq 'fizz'
-  end
-  it 'returns "buzz" when passed 5' do
-    expect(fizzbuzz(5)).to eq 'buzz'
-  end
-  it 'return "fizzbuzz" when passes 3 and 5' do
-    expect(fizzbuzz(15)).to eq 'fizzbuzz'
-  end
-  it 'return "number" when number less than 1' do
-    expect(fizzbuzz(0)).to eq 'num'
-  end
-  it 'return "number" when number not divisible by 3 or 5' do
-    expect(fizzbuzz(11)).to eq 11
-  end
-  it 'return "number" when number not divisible by 3 or 5' do
-    expect(fizzbuzz(13)).to eq 13
+  it "Runs fizzbuzz for numbers 1 to 100" do
+      i = 1
+      while i <= 100 do
+        if (i % 3 == 0) && (i % 5 == 0) 
+          expect(fizzbuzz(i)).to eq "fizzbuzz"
+        elsif i % 3 == 0
+          expect(fizzbuzz(i)).to eq "fizz"
+        elsif i % 5 == 0
+          expect(fizzbuzz(i)).to eq "buzz"
+        else
+          expect(fizzbuzz(i)).to eq i
+        end
+        i += 1
+      end
   end
 end
